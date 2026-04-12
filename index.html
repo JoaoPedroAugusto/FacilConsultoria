@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#007abe",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-fixed": "#270057",
+                        "on-surface": "#191c1e",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#5d15b7",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-container": "#fefcff",
+                        "secondary": "#7336cd",
+                        "secondary-fixed-dim": "#d5baff",
+                        "secondary-fixed": "#ecdcff",
+                        "on-primary-container": "#fdfcff",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#00639b",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary-fixed": "#001d33",
+                        "primary": "#006097",
+                        "secondary-container": "#8d53e8",
+                        "outline-variant": "#bfc7d2",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#004a76",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface-variant": "#404750",
+                        "on-tertiary-fixed": "#001849",
+                        "inverse-primary": "#96cbff",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary": "#1c55c4",
+                        "outline": "#707881",
+                        "on-background": "#191c1e",
+                        "on-tertiary-fixed-variant": "#003fa3",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#dae2ff",
+                        "primary-fixed": "#cee5ff",
+                        "primary-fixed-dim": "#96cbff",
+                        "tertiary-container": "#3f6fde",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-dim": "#d8dadc",
+                        "background": "#f7f9fb",
+                        "tertiary-fixed-dim": "#b2c5ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .editorial-gradient {
+            background: linear-gradient(135deg, #006097 0%, #7336cd 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface-variant antialiased selection:bg-secondary selection:text-white">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#f7f9fb]/60 dark:bg-slate-900/60 backdrop-blur-xl shadow-[0_12px_40px_rgba(0,29,51,0.06)]">
+        <div
+            class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+            <div class="text-2xl font-black tracking-tighter text-[#1580C4] dark:text-[#fdfcff] font-headline shrink-0">
+                <img alt="Fácil Consultoria Logo" class="h-10 sm:h-12 w-auto" src="img/logo.png">
+            </div>
+            <div
+                class="order-3 flex w-full items-center justify-start gap-4 overflow-x-auto whitespace-nowrap pb-1 text-sm sm:gap-6 sm:text-base md:order-2 md:w-auto md:justify-center md:pb-0 lg:gap-8">
+
+            </div>
+        </div>
+    </nav>
+    <main class="pt-36 sm:pt-32 md:pt-28">
+        <!-- Hero Section: Fácil Summit -->
+        <section class="relative min-h-screen flex items-center overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-8"
+            id="summit">
+            <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+                <img class="w-full h-full object-cover"
+                    data-alt="Subtle oversized line-art illustration of a jaguar mascot integrated into the background texture for an editorial look"
+                    src="img/onça2.png">
+            </div>
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12 items-center z-10">
+                <div class="order-2 md:order-1">
+                    <span
+                        class="editorial-gradient bg-clip-text text-transparent font-headline font-extrabold text-sm sm:text-base lg:text-lg tracking-[0.25em] uppercase mb-4 block">Fácil
+                        Summit 2024</span>
+                    <h1
+                        class="font-headline text-4xl sm:text-5xl lg:text-7xl font-extrabold text-on-primary-fixed tracking-tighter leading-tight lg:leading-[1.1] mb-5 sm:mb-6 max-w-3xl">
+                        Há 31 anos a tradição que impulsiona o <span
+                            class="editorial-gradient bg-clip-text text-transparent">futuro</span>.
+                    </h1>
+                    <p
+                        class="text-base sm:text-lg lg:text-xl text-on-surface-variant max-w-2xl mb-8 sm:mb-10 leading-relaxed">
+                        Prepare-se para o maior encontro de gestão e economia da região. Uma imersão transformadora
+                        guiada pela excelência da UFMT.
+                    </p>
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
+                        <button
+                            class="editorial-gradient text-white px-6 sm:px-8 py-4 rounded-md font-headline font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all w-full sm:w-auto">
+                            Garantir meu lugar
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                        <button
+                            class="bg-surface-container-high text-primary px-6 sm:px-8 py-4 rounded-md font-headline font-bold hover:bg-surface-container-highest transition-all w-full sm:w-auto">
+                            Saiba mais
+                        </button>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 relative">
+                    <div
+                        class="aspect-square rounded-full editorial-gradient opacity-10 blur-3xl absolute -inset-4 sm:-inset-8 lg:-inset-10">
+                    </div>
+                    <img class="relative z-10 w-full max-w-[240px] sm:max-w-sm lg:max-w-md mx-auto drop-shadow-2xl"
+                        data-alt="Modern logo of Fácil Summit featuring vibrant purple and deep blue gradients with sleek professional typography"
+                        src="img/logo2,.png" />
+                </div>
+            </div>
+        </section>
+        <!-- Sobre a Fácil -->
+        <section class="bg-surface-container-low py-20 px-4 sm:px-6 sm:py-24 lg:px-8 lg:py-32" id="sobre">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+                <div class="lg:col-span-5 relative">
+                    <div
+                        class="bg-surface-container-lowest p-6 sm:p-8 lg:p-12 rounded-xl shadow-[0_12px_40px_rgba(0,29,51,0.06)] relative z-10">
+                        <img class="w-36 sm:w-44 lg:w-48 mb-6 sm:mb-8"
+                            data-alt="Elegant corporate logo of Fácil Consultoria, Júnior Enterprise of UFMT, displayed on a clean white professional background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxMztqwm_jhX6n47lGqtzYsSmk0OQ0wviycFk_AIaw2VB1rYfyEQhwB5yLMUWF_fMs6Aa-Sfuc7dTLQWicY2r5Mnc8PSVcW8vmBRGhVzEUAWuq8IfILiOwERTYicyFVn081MHZa1IxV_hSOkco5QNKrwvDNSSwat3oTzAs-woVQ19-oLm9crvIbJ3csDq4mMRLlf9GEZ0VMaPAt2JKjPGtBySomsSTzrpACpKRef-dFgGNHu4UjruFfoqLa1C5v8C5YvBfT-VNb2dP" />
+                        <h2
+                            class="font-headline text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight mb-5 sm:mb-6">
+                            Excelência acadêmica a serviço do mercado.</h2>
+                        <p class="text-on-surface-variant text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
+                            Desde 1993, somos a ponte entre o rigor acadêmico da UFMT e as demandas reais do mercado
+                            mato-grossense.
+                        </p>
+                        <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-4">
+                            <div class="p-4 bg-surface rounded-lg">
+                                <span class="font-headline font-black text-3xl text-primary block">31</span>
+                                <span
+                                    class="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">Anos
+                                    de História</span>
+                            </div>
+                            <div class="p-4 bg-surface rounded-lg">
+                                <span class="font-headline font-black text-3xl text-secondary block">UFMT</span>
+                                <span
+                                    class="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">Junior
+                                    Enterprise</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Juma Background Silhouette -->
+                    <div
+                        class="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 lg:-bottom-10 lg:-left-10 opacity-5 pointer-events-none">
+                        <img class="w-40 sm:w-52 lg:w-64 grayscale"
+                            data-alt="Faint silhouette of Juma the jaguar mascot creating an architectural layering effect"
+                            src="" />
+                    </div>
+                </div>
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <div class="max-w-2xl">
+                        <p class="font-headline text-xl sm:text-2xl text-on-surface mb-6 sm:mb-8 leading-relaxed">
+                            A Fácil Consultoria é formada por estudantes das áreas de Administração, Contabilidade e
+                            Economia da Universidade Federal de Mato Grosso.
+                        </p>
+                        <p class="text-on-surface-variant text-base sm:text-lg leading-relaxed mb-8 sm:mb-12">
+                            Nossa missão é desenvolver líderes e transformar organizações através de consultorias
+                            estratégicas, unindo o frescor da juventude com o suporte técnico de mestres e doutores da
+                            instituição. Somos referência em Mato Grosso no Movimento Empresa Júnior (MEJ).
+                        </p>
+                        <div class="space-y-5 sm:space-y-6">
+                            <div class="flex items-start gap-3 sm:gap-4">
+                                <div class="bg-primary-container/20 p-3 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined">strategy</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-headline font-bold text-on-surface">Gestão Estratégica</h4>
+                                    <p class="text-on-surface-variant">Soluções personalizadas para otimizar processos e
+                                        maximizar lucros.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 sm:gap-4">
+                                <div class="bg-secondary-container/20 p-3 rounded-lg text-secondary">
+                                    <span class="material-symbols-outlined">payments</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-headline font-bold text-on-surface">Consultoria Econômica</h4>
+                                    <p class="text-on-surface-variant">Análise de viabilidade e saúde financeira para o
+                                        seu negócio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mascote Juma Section -->
+        <section class="py-20 px-4 sm:px-6 sm:py-24 lg:px-8 lg:py-32 bg-surface">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 items-center">
+                    <div class="relative">
+                        <div
+                            class="absolute -top-8 -left-4 sm:-top-10 sm:-left-8 lg:-top-12 lg:-left-12 w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 editorial-gradient opacity-5 rounded-full blur-3xl">
+                        </div>
+                        <img class="w-full relative z-10 drop-shadow-xl transform max-h-[340px] sm:max-h-[420px] lg:max-h-[500px] object-contain"
+                            data-alt="Full body illustration of Juma the jaguar, the playful yet professional mascot of Fácil Consultoria, wearing a stylish blue bowtie"
+                            src="img/onça1.png" />
+                    </div>
+                    <div>
+                        <span
+                            class="text-primary font-headline font-extrabold uppercase tracking-[0.2em] text-sm sm:text-base mb-4 block">Nossa
+                            Identidade</span>
+                        <h2
+                            class="font-headline text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-surface tracking-tight mb-6 sm:mb-8">
+                            Conheça a Juma.</h2>
+                        <p class="text-base sm:text-lg lg:text-xl text-on-surface-variant leading-relaxed mb-6 sm:mb-8">
+                            Mais do que um mascote, a Juma representa a garra, a proteção e a força da biodiversidade
+                            mato-grossense. Ela é o símbolo que unifica os membros da nossa empresa júnior em torno de
+                            um propósito comum: o impacto positivo.
+                        </p>
+                        <div
+                            class="flex flex-col sm:flex-row gap-4 p-5 sm:p-6 bg-surface-container-low rounded-xl border-l-4 border-secondary">
+                            <span class="material-symbols-outlined text-secondary text-3xl sm:text-4xl shrink-0"
+                                data-weight="fill">shield_with_heart</span>
+                            <p class="text-on-surface italic leading-relaxed font-medium text-sm sm:text-base">
+                                "A Juma encarna o espírito de vigilância e cuidado que temos com cada projeto e cliente
+                                que confia em nossa tradição."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Participantes (Team) Bento Grid -->
+        <section class="py-20 px-4 sm:px-6 sm:py-24 lg:px-8 lg:py-32 bg-surface-container-lowest" id="team">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-12 sm:mb-16 lg:mb-20 text-center md:text-left">
+                    <h2
+                        class="font-headline text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-surface tracking-tight mb-4">
+                        Mentes que transformam.</h2>
+                    <p class="text-base sm:text-lg lg:text-xl text-on-surface-variant max-w-2xl mx-auto md:mx-0">O
+                        talento humano é o nosso maior ativo. Conheça as lideranças por trás da Fácil Consultoria.</p>
+                </div>
+                <div class="grid grid-cols-1 min-[520px]:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8">
+                    <!-- Member 1: Lucas Martins -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-surface-container-low p-2 transition-all hover:shadow-[0_12px_40px_rgba(0,29,51,0.06)]">
+                        <div class="aspect-[4/5] overflow-hidden rounded-lg mb-4 bg-surface-dim">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Lucas Martins, Diretoria Executiva"
+                                src="https://lh3.googleusercontent.com/aida/ADBb0ugOvdpgsUHoVaWIX54UQBvpLExyrv8cogpxBmWzSsYqYR0V_GA9s7vk2lcfBeuORNJllRXfkNa6CI5JqHO8iuJbe52U9LvmJ51hz8VNMV30mYdaphLPb6TDPq7yvmrg434gT9VXiV8CUgEnjJVv8UTAM8CzznFkgtIv6WBRZ-1SNobbPdV5yguqiPdAxewcpq7TeazDu5XmdTTE0PmBAxJt4D1gMiYtluoRZ4skksG_npqwTUpw0BZE3KonDXgnloR5qeUWw1H92g" />
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-headline font-bold text-lg text-on-surface">Lucas Martins</h4>
+                            <p class="text-sm text-primary font-semibold uppercase tracking-wider">Diretoria Executiva
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Member 2: Melissa do Carmos -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-surface-container-low p-2 transition-all hover:shadow-[0_12px_40px_rgba(0,29,51,0.06)]">
+                        <div class="aspect-[4/5] overflow-hidden rounded-lg mb-4 bg-surface-dim">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Melissa do Carmos, Gestão de Projetos"
+                                src="https://lh3.googleusercontent.com/aida/ADBb0ujNO62WhokQywHx2RC4hho1u1pk-4s6rG1EQaB9m4e-O4lC96g8-3OFWwedCmdopSwYMwvF22-siwO7-fkCftlu9cgOZCnJx8YN-MKWQdMmNPHHC-UhOyjQleay5CpF0LM4_NqES22aOFpgq9zNG30qcSDykqpz0X9UfVE7jpVVnsehO_id6QQHCPhro6dvuDHFEFtXcSkWiV9DX1QSJRFdBZVpLlDZ6h1xu5SwmuzUlMLvOKRnFA_nn4ShixbxtPBcRn8ri09U_1o" />
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-headline font-bold text-lg text-on-surface">Melissa do Carmos</h4>
+                            <p class="text-sm text-primary font-semibold uppercase tracking-wider">Gestão de Projetos
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Member 3: Luis Jauer -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-surface-container-low p-2 transition-all hover:shadow-[0_12px_40px_rgba(0,29,51,0.06)]">
+                        <div class="aspect-[4/5] overflow-hidden rounded-lg mb-4 bg-surface-dim">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Luis Jauer, Consultor Econômico"
+                                src="https://lh3.googleusercontent.com/aida/ADBb0ui03DQHIZGrLvjl-lIYKdZFU-zHAr39NeCF7H0PGolW5HIQR1K4izGpr2v0ek2Ylz8UsULg6yWCQmLWFbzCVntWcz_Y99m2169ubw1BHsxCFN1TXT9ptzUY0PgmhDRajbXsNkf8uv3v-yq8dmkuT1rt_ZbfE4P9cSwcEZhmtWC38ci7u2zG73O0Yn5NVQtb95MFh0pxshKjSmgDvbdFolm_rASYK33TY49erz44rbvvPkEklGe719OKHJOL2_8tFekrRFvrgaJmHoA" />
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-headline font-bold text-lg text-on-surface">Luis Jauer</h4>
+                            <p class="text-sm text-primary font-semibold uppercase tracking-wider">Consultor Econômico
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Member 4: Ludmilla Barros -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-surface-container-low p-2 transition-all hover:shadow-[0_12px_40px_rgba(0,29,51,0.06)]">
+                        <div class="aspect-[4/5] overflow-hidden rounded-lg mb-4 bg-surface-dim">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Ludmilla Barros, Administração"
+                                src="https://lh3.googleusercontent.com/aida/ADBb0uhMY8grcIMPw15gLIoheng31c8EXmu-TXaFezCvU_VeUImvIkXlrTCLzSQCK-6qUMbt1beEv8es2BQThvDYWTXVYKn83A61j2rAPYsWlht1KCXY3F1wq3sDlP-ROPhePC1hAJeKkCaovEWXPdyOTUJsduJ_kRV6XNzQslgrU5XnoJwqILjQx44BdP_OOVXSjVvEbj6-3boHvyV3o6w2TukfCkgMd8__ShLmjgjsztAzqLjJei-oHPOI-yKGdstB3H772uxmJeTe4pA" />
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-headline font-bold text-lg text-on-surface">Ludmilla Barros</h4>
+                            <p class="text-sm text-primary font-semibold uppercase tracking-wider">Administração</p>
+                        </div>
+                    </div>
+                    <!-- Member 5: Emilli Santos -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-surface-container-low p-2 transition-all hover:shadow-[0_12px_40px_rgba(0,29,51,0.06)]">
+                        <div class="aspect-[4/5] overflow-hidden rounded-lg mb-4 bg-surface-dim">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Emilli Santos, Marketing"
+                                src="https://lh3.googleusercontent.com/aida/ADBb0ujOkf2uzA2KFEugORQj2Oy3IdXOzm_PdpWEvL7MnVl7GFqSLcXk-MnoSjuzI6T2QYs4-QW5Up3-oOZ0OQDwjRolABDn2KQfPgOxf1mlP-3FRQMVynQOzdQiypohCW7jFzErDJZd-AhBy4Fb-PYrbawrFRWC7Z4mpgXuwbBms2XXUdgPZ6ibwTbURyfVeOLpWcqKnoyjZal4uplhOx7K2gGDrLZUMVFCqGQXpBqYm7ngQ1YMOta00w9A7BlDsx9WcGCwXN8u1k4ZMu0" />
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-headline font-bold text-lg text-on-surface">Emilli Santos</h4>
+                            <p class="text-sm text-primary font-semibold uppercase tracking-wider">Marketing</p>
+                        </div>
+                    </div>
+                    <!-- Member 6: Victor Rondon -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-surface-container-low p-2 transition-all hover:shadow-[0_12px_40px_rgba(0,29,51,0.06)]">
+                        <div class="aspect-[4/5] overflow-hidden rounded-lg mb-4">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Victor Rondon, professional male profile with warm lighting and friendly demeanor"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiLOS-NX6b_Jza7FWnRTmW26xbzSez6pTgo1JYrMP5_ORYHfUHWfO2luutOtc50g0kbTfcU94fNCiCyhYub233ib0EhJylXwXgj6vMcLC9gXWHiouj3WTUbHR08eajX1qf4UC4Ojclxb0zEKi_6WAAYd3s_pfIhOePUoFv57jsc3mzNVNDptQZDZXnXdsbaYa0FJh1MSJJZobuhVjK2znPvkT9qlU2OrKiqeabBy5P9P-alwqsBa9Nct8hwnPbr2fXDzRJoKi8GVqZ" />
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-headline font-bold text-lg text-on-surface">Victor Rondon</h4>
+                            <p class="text-sm text-primary font-semibold uppercase tracking-wider">Relacionamento</p>
+                        </div>
+                    </div>
+                    <!-- Member 7: João Jorte -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-surface-container-low p-2 transition-all hover:shadow-[0_12px_40px_rgba(0,29,51,0.06)]">
+                        <div class="aspect-[4/5] overflow-hidden rounded-lg mb-4">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="João Jorte, expert consultant in business attire, sharp focus, professional backdrop"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqL3uJd3kNPOOFvribHY90zOJElU7Y3tY3X11LR5sJH582iwk1mQhKHjoa4erzfYU0zujVy4NfVgbt5pGRXi7spHiEZRSM4lJxvYpKe_b_uYGVCddIvhcEUhorUNn8wTIx3-AMRENYNq3CtNeqrIVd_hF0purQ98USi0vLE4w9fvRCQvsMtBvt_5rgMksUGucRrj0S-yCA8YStBbYzLA-i0hyn0cBnhzR3nuZNOCRW_zaAXpRjOeI_-YUQYVp-uAAwhHJpc4hDthxE" />
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-headline font-bold text-lg text-on-surface">João Jorte</h4>
+                            <p class="text-sm text-primary font-semibold uppercase tracking-wider">Análise de Dados</p>
+                        </div>
+                    </div>
+                    <!-- Member 8: Rafael Tomasoni -->
+                    <div
+                        class="group relative overflow-hidden rounded-xl bg-surface-container-low p-2 transition-all hover:shadow-[0_12px_40px_rgba(0,29,51,0.06)]">
+                        <div class="aspect-[4/5] overflow-hidden rounded-lg mb-4">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Rafael Tomasoni, professional portrait of a senior consultant, evening light, sophisticated look"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_jLOw3zLkYpXrehZuX2fy3850-fl2q7YiyYcDDa3AhUYxuVNCERZ3HXNyg8rsqfDkuDnpuID2fXuGFGxHupZkyPGnVS4EQwIEdMGMWEKFrjjZGQEsgFK-C_YqvgGzhLbhhf9PXgKazBb3LQB7Kx3UjJ0OLvzNzpEPBUfwkH3WiN0k9JB0wBhDHPCbcvN1sE5UuvFbJLM5nxthehCTf0Z2b31ERjQytzGVNSDBczam3ON8jxo4SxzZeskBzlEk89irDHUVFIACpGMl" />
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-headline font-bold text-lg text-on-surface">Rafael Tomasoni</h4>
+                            <p class="text-sm text-primary font-semibold uppercase tracking-wider">Gestão Comercial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA / Footer Section with Tonal Shift -->
+        <section class="py-20 px-4 sm:px-6 sm:py-24 lg:px-8 editorial-gradient text-white overflow-hidden relative">
+            <div class="absolute inset-0 opacity-10 flex justify-center items-center pointer-events-none">
+                <img class="w-[320px] sm:w-[520px] lg:w-[800px] grayscale brightness-200"
+                    data-alt="Subtle jaguar watermark texture in white lines"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqLDRWwydSvZxndxD5objEOga4snPLV1zcUy5sKs09TKCLDTEDFk1NCeFRLZXxII9yOpZAiPkrAm5PTAqIt2m8mugTTUFgrmlNgXzELpo5s2KZreU-GhF1zvlcNq1Azwf7Rt0yNyp-lcrzTuQvO5ICsuzkTBvryKYoOEVLFSNhQgeBY5_BY9vKgcCaFyBsfgv7PaduI0oWtG7ukA3rhp7vRiAQDqyezAQCjeKl9iH2YiFfQYDdW3vVqjW852t1GyFNo-LiZRJovbhw" />
+            </div>
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <h2 class="font-headline text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 sm:mb-8 tracking-tight">O
+                    próximo capítulo da sua história começa aqui.</h2>
+                <p class="text-base sm:text-lg lg:text-xl opacity-90 mb-8 sm:mb-12 leading-relaxed">Seja para
+                    impulsionar seu negócio ou garantir sua participação no Summit, nossa equipe está pronta para te
+                    atender.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+                    <button
+                        class="bg-white text-primary px-6 sm:px-10 py-4 sm:py-5 rounded-md font-headline font-black text-base sm:text-lg hover:scale-105 transition-transform w-full sm:w-auto">
+                        Falar com um Consultor
+                    </button>
+                    <button
+                        class="bg-secondary/30 backdrop-blur-md border border-white/30 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-md font-headline font-black text-base sm:text-lg hover:bg-secondary/50 transition-all w-full sm:w-auto">
+                        Comprar Ingresso Summit
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#f2f4f6] dark:bg-slate-950">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16 w-full max-w-7xl mx-auto">
+            <div>
+                <span class="font-['Manrope'] font-extrabold text-[#1580C4] text-2xl mb-6 block">Fácil
+                    Consultoria</span>
+                <p class="font-['Inter'] text-sm leading-relaxed text-[#404750] dark:text-[#bfc7d2] max-w-sm">
+                    A maior Empresa Júnior do estado de Mato Grosso. Compromisso com o desenvolvimento acadêmico e
+                    resultados de mercado.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 min-[420px]:grid-cols-2 gap-8">
+                <div>
+                    <h5 class="font-headline font-bold text-on-surface mb-4">Quick Links</h5>
+                    <ul class="space-y-3 font-['Inter'] text-sm text-[#404750] opacity-80">
+                        <li><a class="hover:text-[#7336cd] transition-colors duration-200 underline-offset-4 hover:underline"
+                                href="#">Support</a></li>
+                        <li><a class="hover:text-[#7336cd] transition-colors duration-200 underline-offset-4 hover:underline"
+                                href="#">UFMT</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-headline font-bold text-on-surface mb-4">Legal</h5>
+                    <ul class="space-y-3 font-['Inter'] text-sm text-[#404750] opacity-80">
+                        <li><a class="hover:text-[#7336cd] transition-colors duration-200 underline-offset-4 hover:underline"
+                                href="#">Contact</a></li>
+                        <li><a class="hover:text-[#7336cd] transition-colors duration-200 underline-offset-4 hover:underline"
+                                href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-outline-variant/10 px-4 py-6 sm:px-6 sm:py-8 lg:px-8 text-center md:text-left">
+            <p class="font-['Inter'] text-xs text-[#404750] dark:text-[#bfc7d2] opacity-60">
+                © 1993-2023 Fácil Consultoria - UFMT Junior Enterprise. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
